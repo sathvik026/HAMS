@@ -1,0 +1,28 @@
+EC2 creation 
+Volume create check zone 
+Attach via volume actions
+Attach volume 
+Select EC2
+Ec2 connect cloudshell
+Lsblk
+Sudo fdisk -l
+Name of Device xvdbf or nvme
+Sudo fdisk /dev/xvdbf
+M
+N
+Enter 3
+W
+SUDO partprobe
+Sudo fdisk -l
+Sudo mkfs.xfs /dev/xvdbf1
+Sudo mkdir /mnt/sathvik
+Sudo mount /dev/xvdbf1 /mnt/sathvik
+Sudo blkid /dev/xvdbf1
+COPY UUID
+Sudo nano /etc/fstab
+UUID=copied UUID /mnt/sathvik xfs defaults,nofails 0 0
+Ctrl 0 enter Ctrl x
+Sudo mount -a
+Sudo df
+Close the cloudshell and open
+Sudo df
